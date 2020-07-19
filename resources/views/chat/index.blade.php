@@ -8,14 +8,15 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
     <script type="text/javascript" src="{{ asset('js/skyway.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/skyway.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     <div class="pure-g">
         <!-- Video area -->
         <div class="pure-u-2-3" id="video-container">
             <div id="their-videos"></div>
-            <video id="my-video" muted="true" autoplay playsinline></video>
+            <video id="my-video" class="w-100 h-100" muted="true" autoplay playsinline></video>
         </div>
         <!-- Steps -->
         <div class="pure-u-1-3">
