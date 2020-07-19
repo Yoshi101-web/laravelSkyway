@@ -5,7 +5,7 @@
         <!-- <button @click="speechStop" id="btn">stop</button> -->
         <!-- <textarea v-model="text"/> -->
         <div v-for="(content,index) in contents" :key="index">
-            <p>{{ content }}</p>
+            <p>{{ content.text }}</p>
         </div>
     </div>
 </template>
@@ -28,9 +28,8 @@ export default {
                 this.recognition.stop();
                 if(event.results[0].isFinal){
                     this.autotext =  event.results[0][0].transcript
-                    // console.log(e);
                     console.log(this.autotext);
-                    this.contents.push(this.autotext);
+                    this.contents.push({text: this.autotext});
                 }
             }
             this.recognition.onend = () => { 
