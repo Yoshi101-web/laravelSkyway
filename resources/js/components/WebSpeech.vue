@@ -1,6 +1,5 @@
 <template>
     <div>
-        :class="{drag: isDrag}"
         <h2>音声認識サンプル</h2>
         <button @click="recognitionStart" id="btn" :class="{startUp: isStart}">start</button>
         <button @click="recognitionStop" id="btn" :class="{end: isEnd}">停止</button>
