@@ -7,7 +7,9 @@
         <!-- <button @click="speechStop" id="btn">stop</button> -->
         <!-- <textarea v-model="text"/> -->
         <div v-for="(content,index) in contents" :key="index">
-            <p>{{ content.text }}</p>
+            <p name="content">{{ content.text }}</p>
+
+            <!-- <textarea v-model="content.text"/> -->
         </div>
     </div>
 </template>
@@ -47,9 +49,17 @@ export default {
         },
         recognitionStop() {
             this.recognition.onend = null;
-           this.recognition.stop();
+            this.recognition.stop();
             this.isStart = false;
             this.isEnd = true;
+        }
+    },
+    watch: {
+        contents: function(){
+            axios.post('/api/contents', {content: this.autotext})
+                .then((response) => {
+                    console.log(response.data);
+                });
         }
     },
     mounted() {
