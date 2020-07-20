@@ -1,7 +1,6 @@
 /node_modules
 /public/hot
-/public/js/app.js
-/public/js/skyway.js
+/public/js/*
 /public/storage
 /storage/*.key
 /vendor
