@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/contents', 'ChatController@store');
+Route::post('/contents', 'Api\ChatController@store');
