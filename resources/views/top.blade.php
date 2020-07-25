@@ -1,20 +1,16 @@
 
-<!doctype html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Web</title>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-    <i class="fas fa-microphone"></i>
-        <i class="fas fa-microphone-slash"></i>
-        <i class="fas fa-sign-out-alt"></i>
-        <web-speech></web-speech>
+@extends('layouts.app')
+
+@section('title', 'Skyway')
+
+@section('content')
+    @include('common.header')
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 p-4 text-center">
+                <h1 class="m-5">チャットを始める</h1>
+                <a href="/chat" class="btn btn-default bg-primary text-white">スタート</a>
+            </div>
+        </div>
     </div>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-</body>
-</html>
+@endsection
