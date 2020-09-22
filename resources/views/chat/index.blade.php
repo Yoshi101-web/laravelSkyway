@@ -9,7 +9,7 @@
 
 @section('content')
     @include('common.header')
-    @include('chat.chat')
+    <chat></chat>
     <web-speech></web-speech>
 @endsection
 
